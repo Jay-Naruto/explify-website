@@ -50,6 +50,9 @@ const Header: FC = () => {
                 position: 'fixed',
                 height: { xs: '100vh', md: 'auto' },
                 top: visibleMenu ? 0 : '-120vh',
+                display:'flex',
+                justifyContent:'center',
+                alignItems:'center',
                 left: 0,
               }),
             }}

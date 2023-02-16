@@ -13,6 +13,7 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore'
 import styles from '../styles/service.module.css'
 import { StyledButton } from '../components/styled-button'
 import Link from 'next/link'
+import { Header } from '../components/header';
 export default function services() {
   const theme = useTheme();
   const matches = useMediaQuery(theme.breakpoints.up('sm'));
@@ -20,6 +21,8 @@ export default function services() {
 
   return (
     <div>
+  <Header/>
+
       <div className={styles.header}>
         <Typography
           component="h2"
@@ -44,7 +47,7 @@ export default function services() {
         }}
       >
         <Container>
-          <Grid container className={styles.boxRow2} spacing={ !matches2 ? 0 : 5}>
+          <Grid container className={styles.boxRow2} spacing={ !matches2 ? 0 : 2}>
             <Grid
               sx={{
                 pb: { xs: 6, md: 10 },
@@ -54,6 +57,7 @@ export default function services() {
                 border: '3px solid #E0C781',
                 borderRadius: '39px',
                 width: '100%',
+                textAlignLast:'center'
               }}
               item
               xs={12}
@@ -99,7 +103,7 @@ export default function services() {
 
       <Box id="services" sx={{ pb: { xs: 6, md: 10 }, backgroundColor: '' }}>
         <Container>
-          <Grid className={styles.boxRow2} container spacing={ !matches2 ? 0:5}>
+          <Grid className={styles.boxRow2} container spacing={ !matches2 ? 0:2}>
             <Grid
               item
               xs={12}
@@ -154,7 +158,7 @@ export default function services() {
 
       <Box id="services" sx={{ pb: { xs: 6, md: 10 }, backgroundColor: '' }}>
         <Container>
-          <Grid container className={styles.boxRow2} spacing={ !matches2 ? 0:5}>
+          <Grid container className={styles.boxRow2} spacing={ !matches2 ? 0:2}>
             <Grid
               item
               xs={12}

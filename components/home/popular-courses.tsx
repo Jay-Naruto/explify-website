@@ -68,7 +68,7 @@ const HomePopularCourse: FC = () => {
   const [time3, setTime3] = useState<Number>()
   useEffect(() => {
     $(window).scroll(function () {
-      console.log($(window).scrollTop())
+      
       if ($(window).scrollTop() > 550) {
         setTime1(1)
       } else if ($(window).scrollTop() < 550) {
@@ -77,7 +77,7 @@ const HomePopularCourse: FC = () => {
     })
 
     $(window).scroll(function () {
-      console.log($(window).scrollTop())
+      
       if ($(window).scrollTop() > 800) {
         setTime2(1)
       } else if ($(window).scrollTop() < 800) {
@@ -86,7 +86,7 @@ const HomePopularCourse: FC = () => {
     })
 
     $(window).scroll(function () {
-      console.log($(window).scrollTop())
+      
       if ($(window).scrollTop() > 1000) {
         setTime3(1)
       } else if ($(window).scrollTop() < 1000) {

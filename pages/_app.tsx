@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import React, { FC, useEffect, useState } from 'react'
 import Head from 'next/head'
 import type { AppProps } from 'next/app'
 import { CssBaseline } from '@mui/material'
@@ -10,10 +10,15 @@ import 'slick-carousel/slick/slick.css'
 import '../styles/globals.css'
 import '../styles/react-slick.css'
 
+import '@fortawesome/fontawesome-free/css/all.css';
+
+import Router from 'next/router'
 import { NextPageWithLayout } from '../interfaces/layout'
+import Loading from './Loading'
 // import 'slick-carousel/slick/slick-theme.css'
 
 // Client-side cache, shared for the whole session of the user in the browser.
+
 const clientSideEmotionCache = createEmotionCache()
 
 type AppPropsWithLayout = AppProps & {
@@ -22,6 +27,27 @@ type AppPropsWithLayout = AppProps & {
 }
 
 const App: FC<AppPropsWithLayout> = (props: AppPropsWithLayout) => {
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    Router.events.on('routeChangeStart', handleRouteChangeStart);
+    Router.events.on('routeChangeComplete', handleRouteChangeComplete);
+    Router.events.on('routeChangeError', handleRouteChangeComplete);
+
+    return () => {
+      Router.events.off('routeChangeStart', handleRouteChangeStart);
+      Router.events.off('routeChangeComplete', handleRouteChangeComplete);
+      Router.events.off('routeChangeError', handleRouteChangeComplete);
+    };
+  }, []);
+
+  const handleRouteChangeStart = () => {
+    setLoading(true);
+  };
+
+  const handleRouteChangeComplete = () => {
+    setLoading(false);
+  };
   const { Component, emotionCache = clientSideEmotionCache, pageProps } = props
 
   // Use the layout defined at the page level, if available
@@ -45,6 +71,7 @@ const App: FC<AppPropsWithLayout> = (props: AppPropsWithLayout) => {
         <meta name="viewport" content="initial-scale=1, width=device-width" />
         <title>Explify</title>
       </Head>
+      {loading && <Loading />}
       <MUIProvider>
         {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
         <CssBaseline />

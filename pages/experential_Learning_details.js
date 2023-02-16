@@ -1,5 +1,6 @@
 import { StyledButton } from '../components/styled-button'
 import { Typography, Box, Container } from '@mui/material'
+import { Header } from '../components/header'
 
 import { useRouter } from 'next/router'
 import React from 'react'
@@ -7,7 +8,8 @@ import styles from '../styles/experential_Learning_details.module.css'
 export default function experential_Learning_details() {
   const location = useRouter()
   const data = location.query
-  return (
+  return (<>
+  <Header/>
     <div className={styles.component}>
       {data && (
         <>
@@ -90,5 +92,6 @@ export default function experential_Learning_details() {
         </>
       )}
     </div>
+    </>
   )
 }

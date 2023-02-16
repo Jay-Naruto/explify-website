@@ -7,6 +7,7 @@ import Container from '@mui/material/Container'
 import { Typography } from '@mui/material'
 import { StyledButton } from '../components/styled-button'
 import Link from 'next/link'
+import { Header } from '../components/header'
 export default function experential_Learning() {
   interface User {
     id: number | string
@@ -62,7 +63,11 @@ export default function experential_Learning() {
   ]
 
   return (
+    <>
+  {/* <Header/> */}
+    
     <div>
+
       <Box id="services" sx={{ pb: { xs: 6, md: 10 }, backgroundColor: 'rgba(255, 255, 255, 0.08);' }}>
         <Container>
           <Grid container spacing={5}>
@@ -164,7 +169,7 @@ export default function experential_Learning() {
                         }}
                         as={data.name}
                       >
-                        Get Pass
+                        View More
                       </Link>
                     </StyledButton>
                     {/* </ScrollLink> */}
@@ -176,5 +181,6 @@ export default function experential_Learning() {
         </div>
       </div>
     </div>
+    </>
   )
 }

@@ -68,7 +68,7 @@ const HomeTestimonial: FC = () => {
   }
 
   return (
-    <Box id="testimonial" sx={{ pb: { xs: 6, md: 10 }, backgroundColor: '' }}>
+    <Box id="about-us" sx={{ pb: { xs: 6, md: 10 }, backgroundColor: '' }}>
       <Container>
         <Grid sx={{}} container spacing={5}>
           <Grid sx={{ width: '100%' }} item xs={12} md={6} sm={12}>
