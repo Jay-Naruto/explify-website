@@ -13,6 +13,17 @@
 .form div {
   /* width: 50%; */
 }
+.formBody{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 140px;
+}
+@media screen and (max-width:1000px) {
+  .formBody{
+    display: none;
+  }
+}
 .header {
   display: flex;
   justify-content: center;
@@ -70,6 +81,10 @@
     height: 40px;
     width: 100%;
   }
+  .formgroup button {
+    margin-top: 20px;
+  }
+  
 }
 
 .formgroup {
@@ -85,7 +100,7 @@
   background: #e0c781;
   border-radius: 83px;
   color: black;
-  padding: 10px 50px;
-  font-size: 15px;
-  font-weight: 500;
+  padding: 10px 60px;
+  font-size: 20px;
+  font-weight: 700;
 }

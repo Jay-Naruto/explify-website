@@ -1,3 +1,11 @@
+@font-face {
+  font-family: OutfitR;
+  src: url(../public/Outfit-Regular.ttf);
+}
+@font-face {
+  font-family: OutfitM;
+  src: url(../public/Outfit-Medium.ttf);
+}
 :root {
   --color-background: #f5f5f9;
   --color-scrollbar: rgb(224, 224, 224);

@@ -28,12 +28,13 @@ export default function services() {
           component="h2"
           sx={{
             position: 'relative',
-            fontSize: { xs: 36, md: 46 },
+           
             mt: { xs: 7, md: 7 },
             mb: 4,
             lineHeight: 1,
-            fontWeight: 'bold',
+     
           }}
+          className={styles.text}
         >
           Services{' '}
         </Typography>
@@ -67,13 +68,13 @@ export default function services() {
                 component="h2"
                 sx={{
                   position: 'relative',
-                  fontSize: { xs: 36, md: 46 },
                   mt: { xs: 7, md: 7 },
                   mb: 4,
                   lineHeight: 1,
-                  fontWeight: 'bold',
                   color: 'white',
                 }}
+                className={styles.title}
+
               >
                 Experential Learning{' '}
               </Typography>
@@ -122,13 +123,13 @@ export default function services() {
                 component="h2"
                 sx={{
                   position: 'relative',
-                  fontSize: { xs: 36, md: 46 },
                   mt: { xs: 7, md: 7 },
                   mb: 4,
                   lineHeight: 1,
-                  fontWeight: 'bold',
                   color: 'white',
                 }}
+                className={styles.title}
+
               >
                 Virtual Experience{' '}
               </Typography>
@@ -177,13 +178,12 @@ export default function services() {
                 component="h2"
                 sx={{
                   position: 'relative',
-                  fontSize: { xs: 36, md: 46 },
                   mt: { xs: 7, md: 7 },
                   mb: 4,
                   lineHeight: 1,
-                  fontWeight: 'bold',
                   color: 'white',
                 }}
+                className={styles.title}
               >
                 Psychometric Tests{' '}
               </Typography>

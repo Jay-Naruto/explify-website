@@ -64,7 +64,7 @@ const HomeHero: FC = () => {
               }}
             >
               <Box sx={{ mb: 4, width: { xs: '100%', md: '70%' } }}>
-                <Typography sx={{ color: 'white', lineHeight: 1, fontSize: 70, fontWeight: 700 }}>
+                <Typography sx={{ color: 'white', lineHeight: 1,  fontWeight: 700 }} className={styles.text}>
                   {'Discover Best School & Uni for you'}
                 </Typography>
               </Box>
@@ -97,7 +97,7 @@ const HomeHero: FC = () => {
             {/* Sertificate badge */}
 
             <Box sx={{ lineHeight: 0 }}>
-              <img src="/images/image 16.png" className={styles.heroImg} alt="Hero img" />
+              <img src="/images/heroImg2.png" className={styles.heroImg} alt="Hero img" />
             </Box>
           </Grid>
         </Grid>
@@ -105,7 +105,7 @@ const HomeHero: FC = () => {
         {/* Experience */}
       </Container>
       <Container>
-        <img className={styles.options} src="./images/options.png" alt="" />
+        <img  className={styles.options} src="./images/options.png" alt="" />
       </Container>
     </Box>
   )

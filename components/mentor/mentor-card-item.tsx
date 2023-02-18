@@ -17,8 +17,7 @@ const MentorCardItem: FC<Props> = ({ item }) => {
   return (
     <Box
       sx={{
-        px: 1.5,
-        py: 5,
+        
       }}
     >
       <Box
@@ -31,6 +30,10 @@ const MentorCardItem: FC<Props> = ({ item }) => {
             boxShadow: ' 1px 1px 1px 1px rgb(255,255,255,0.1);',
             cursor: 'pointer',
           },
+          display:'flex',
+          justifyContent:'center',
+          alignItems:'center',
+          flexDirection:'column'
         }}
       >
         <Box
@@ -45,9 +48,16 @@ const MentorCardItem: FC<Props> = ({ item }) => {
           <Link href={item.link}>
             <img style={{ width: '100%', height: '100%' }} src={item.photo as string} alt={'Img ' + item.id} />
           </Link>
-          {/* <Typography>{item.name}</Typography> */}
         </Box>
-        <Box sx={{ mb: 2 }}></Box>
+        <Box sx={{ mb: 2 }}>
+        <Typography
+        sx={{
+           color:'white',
+           fontSize:20
+        }}
+        >{item.name}</Typography>
+
+        </Box>
       </Box>
     </Box>
   )

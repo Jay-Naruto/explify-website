@@ -101,17 +101,17 @@ const HomeOurMentors: FC = () => {
         }}
         maxWidth="lg"
       >
-        <Typography variant="h1" sx={{ fontSize: 40, color: 'white' }}>
+        <Typography className={styles.text} sx={{ color: 'white' }}>
           Connect With Us
         </Typography>
 
         {/* <Slider {...sliderConfig}> */}
         <Box
-          className={styles.flex}
+          className={styles.rotating_border}
           sx={{
-            border: '2px solid #7170C4',
-            borderTop: 'none',
-            borderRadius: '20px',
+            // border: '2px solid #7170C4',
+            // borderTop: 'none',
+            // borderRadius: '20px',
           }}
         >
           {data.map((item) => (

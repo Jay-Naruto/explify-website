@@ -70,19 +70,18 @@ export default function experential_Learning() {
 
       <Box id="services" sx={{ pb: { xs: 6, md: 10 }, backgroundColor: 'rgba(255, 255, 255, 0.08);' }}>
         <Container>
-          <Grid container spacing={5}>
-            <Grid item xs={12} md={6}>
+          <Grid className={styles.descpBody} container spacing={5}>
+            <Grid  item xs={12} md={6}>
               <Typography
-                component="h2"
                 sx={{
                   position: 'relative',
-                  fontSize: { xs: 36, md: 46 },
                   mt: { xs: 7, md: 7 },
                   mb: 4,
+                  color:'white',
                   lineHeight: 1,
                   fontWeight: 'bold',
-                  color: 'white',
                 }}
+                className={styles.text}
               >
                 Experential Learning{' '}
               </Typography>
@@ -94,8 +93,8 @@ export default function experential_Learning() {
                 <Link href="/experential-learning">Visit</Link>
               </StyledButton> */}
             </Grid>
-            <Grid item xs={12} md={6} sm={6} sx={{ display: { md: 'block' } }}>
-              <Box sx={{ width: { xs: '100%', md: '90%' } }}>
+            <Grid  item xs={12} md={6} sm={6} sx={{ display: { md: 'block' } }}>
+              <Box className={styles.descpBody} sx={{ width: { xs: '100%', md: '90%' } }}>
                 {/* <Image src="/images/home-testimonial.png" width={520} height={540} quality={97} alt="Testimonial img" /> */}
                 <div>
                   <img
@@ -114,8 +113,8 @@ export default function experential_Learning() {
           {data.map((data) => (
             <Box
               sx={{
-                px: 1.5,
-                py: 5,
+                my: 5,
+                px:1.5
               }}
               className={styles.cardBox}
             >
@@ -144,7 +143,7 @@ export default function experential_Learning() {
                   <img style={{ width: '100%', height: '100%' }} src={data.photo} alt={'Img '} />
                 </Box>
                 <Box sx={{ mb: 2 }}>
-                  <Typography component="h2" variant="h4" sx={{ fontSize: '1.4rem', color: 'black' }}>
+                  <Typography className={styles.title} sx={{  color: 'black' }}>
                     {data.name}
                   </Typography>
 

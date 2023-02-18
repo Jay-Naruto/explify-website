@@ -1,12 +1,15 @@
 import { StyledButton } from '../components/styled-button'
 import { Typography, Box, Container } from '@mui/material'
 import { Header } from '../components/header'
+import {useRouter as router} from 'next/navigation'
 
 import { useRouter } from 'next/router'
-import React from 'react'
+import React, { useEffect } from 'react'
 import styles from '../styles/experential_Learning_details.module.css'
 export default function experential_Learning_details() {
   const location = useRouter()
+  const nav = router()
+
   const data = location.query
   return (<>
   <Header/>
@@ -22,13 +25,12 @@ export default function experential_Learning_details() {
                 component="h2"
                 sx={{
                   position: 'relative',
-                  fontSize: { xs: 36, md: 46 },
                   mt: { xs: 7, md: 7 },
                   mb: 4,
                   lineHeight: 1,
-                  fontWeight: 'bold',
                   color: 'white',
                 }}
+                className={styles.text}
               >
                 Description{' '}
               </Typography>
@@ -37,7 +39,7 @@ export default function experential_Learning_details() {
               </div>
             </div>
           </div>
-          <Box id="contact-us" sx={{ backgroundColor: '', py: { xs: 8, md: 10 } }}>
+          <Box id="contact-us" sx={{ backgroundColor: '', py: { xs: 8, md: 10 }, width:{xs:'100%'} }}>
             <Container>
               <Box
                 sx={{
@@ -49,7 +51,10 @@ export default function experential_Learning_details() {
                   border: '1px solid #00c6ff',
                 }}
               >
-                <Typography variant="h1" component="h2" sx={{ mb: 1, fontSize: { xs: 32, md: 42 } }}>
+                <Typography 
+                className={styles.title}
+                
+                sx={{ mb: 1 }}>
                   College Name
                 </Typography>
                 {/* <Typography sx={{ mb: 6 }}>Email us</Typography> */}

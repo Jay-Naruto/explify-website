@@ -1,8 +1,24 @@
+@font-face {
+  font-family: OutfitR;
+  src: url(../public/Outfit-Medium.ttf);
+}
+@font-face {
+  font-family: OutfitM;
+  src: url(../public/Outfit-Bold.ttf);
+}
+
 .flex {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
+}
+.animated_border_box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  animation: glow-border 1s ease-in-out infinite alternate;
 }
 @media screen and (max-width: 1000px) {
   .flex {
@@ -12,4 +28,92 @@
     flex-direction: column;
     width: 100%;
   }
+  .rotating_border {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+
+  
+  }
+  .text{
+    font-family: OutfitM;
+    font-size: 40px !important;
+  }
+}
+
+
+
+@keyframes spin {
+  from {transform: translate(-50%, -50%) rotate(0);}
+  to   {transform: translate(-50%, -50%) rotate(360deg);}
+}
+.text{
+  font-family: OutfitM;
+  font-size: 50px;
+}
+.rotating_border {
+  --border-radius: 1rem;
+  --border-size: 0.1rem;
+  --border-bg: conic-gradient(#e0c781,#e0c781,#e0c781,#000235,#000235,#000235);
+  --padding: 1rem;
+  
+  position: relative;
+  overflow: hidden;
+  font-size: 2rem;
+  padding: calc(var(--padding) + var(--border-size));
+  border-radius: var(--border-radius);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 50px;
+  
+
+  
+}
+.rotating_border::before {
+  content: '';
+  display: block;
+  background: var(--border-bg);
+  width: calc(100% * 1.41421356237);
+  padding-bottom: calc(100% * 1.41421356237);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 100%;
+  z-index: -2;
+  animation: spin 5s linear infinite;
+}
+.rotating_border::after{
+  content: '';
+  position: absolute;
+  inset: var(--border-size);
+  background: #000235;
+  z-index: -1;
+  border-radius: calc(var(--border-radius) - var(--border-size));
+}
+/* ---------- End .rotating_border ---------- */
+
+/* ---------- Begin customizing .rotating_border ---------- */
+.rotating_border_google {
+  --border-radius: 0.5rem;
+  --border-size: 0.25rem;
+
+  --border-bg: conic-gradient(
+    #e0c781 0.0turn 0.125turn, 
+    #e0c781 0.125turn 0.25turn, 
+    #e0c781 0.25turn 0.375turn, 
+    #e0c781 0.375turn 0.5turn, 
+    #e0c781 0.5turn 0.625turn, 
+    #e0c781 0.625turn 0.75turn, 
+    #e0c781 0.75turn 0.875turn, 
+    #e0c781 0.875turn 1.0turn
+  );
+  
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  line-height: 2;
 }

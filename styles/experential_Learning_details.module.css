@@ -7,7 +7,23 @@
   background-color: '';
   /* padding: 20px; */
 }
+@font-face {
+  font-family: OutfitR;
+  src: url(../public/Outfit-Medium.ttf);
+}
+@font-face {
+  font-family: OutfitM;
+  src: url(../public/Outfit-Bold.ttf);
+}
+.text{
+  font-size: 50px;
+  font-family: OutfitM;
 
+}
+.title{
+  font-size: 30px;
+  font-family: OutfitM;
+}
 .dataImg {
   width: 100%;
   background-color: #141645;
@@ -19,13 +35,17 @@
   display: flex;
   width: 100%;
   justify-content: center;
+  font-family: OutfitR;
   align-items: center;
+
   flex-direction: column;
 }
 .description {
   margin-top: 30px;
   display: flex;
   width: 70%;
+  font-family: OutfitR;
+
   font-size: 20px;
   justify-content: center;
   align-items: center;
@@ -41,6 +61,8 @@
   justify-content: center;
   align-items: center;
   color: #00c6ff;
+  font-family: OutfitR;
+
 }
 .header {
   display: flex;
@@ -49,4 +71,6 @@
   text-align: center;
   font-size: 30px;
   margin-bottom: 50px;
+  font-family: OutfitR;
+
 }

@@ -41,7 +41,10 @@ export default function schoolform() {
     console.log(JSON.stringify(data, null, 2))
   }
   return (
-    <>
+    <div >
+      <div>
+        <img className={styles.formBody} src='./images/Ellipse 6.png' alt=''/>
+      </div> 
       <Header />
 
       <div className={styles.form}>
@@ -136,6 +139,26 @@ export default function schoolform() {
                               />
                               <div className="invalid-feedback">{errors.location?.message}</div>
                             </div>
+
+                            <div className="form-group">
+                              <label style={{ color: 'white' }}>Contact</label>
+                              <input
+                                type="text"
+                                {...register('contact')}
+                                style={{
+                                  background: 'rgba(99, 88, 189, 0.19)',
+                                  opacity: 0.73,
+                                  border: '1px solid rgba(255, 255, 255, 0.92)',
+                                  borderRadius: '11px',
+
+                                  color: 'white',
+                                }}
+                                className={`form-control ${errors.contact ? 'is-invalid' : ''}`}
+                              />
+                              <div className="invalid-feedback">{errors.contact?.message}</div>
+                            </div>
+
+
                             <div className="form-group">
                               <label style={{ color: 'white' }}>Details</label>
                               <input
@@ -174,6 +197,6 @@ export default function schoolform() {
         </Box>
       </div>
       <Footer />
-    </>
+    </div>
   )
 }

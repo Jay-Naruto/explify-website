@@ -1,3 +1,11 @@
+@font-face {
+  font-family: OutfitR;
+  src: url(../public/Outfit-Medium.ttf);
+}
+@font-face {
+  font-family: OutfitM;
+  src: url(../public/Outfit-Bold.ttf);
+}
 .accordian {
   margin-top: 20px;
   background-color: #000235;
@@ -13,6 +21,15 @@
   font-size: 30px;
   margin-bottom: 50px;
   color: white;
+}
+.text{
+  font-size: 50px;
+  font-family: OutfitM;
+
+}
+.title{
+  font-size: 35px;
+  font-family: OutfitM;
 }
 .boxRow{
   display: flex;

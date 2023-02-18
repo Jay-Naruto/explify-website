@@ -42,6 +42,9 @@ export default function schoolform() {
   }
   return (
     <>
+       <div>
+        <img className={styles.formBody} src='./images/Ellipse 6.png' alt=''/>
+      </div> 
       <Header />
       <div className={styles.form}>
         <div className={styles.header}></div>

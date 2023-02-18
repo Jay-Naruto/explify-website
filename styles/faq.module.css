@@ -5,3 +5,19 @@
   border: 1px solid rgb(179, 179, 179) !important;
   border-radius: 10px;
 }
+@font-face {
+  font-family: OutfitR;
+  src: url(../public/Outfit-Medium.ttf);
+}
+@font-face {
+  font-family: OutfitM;
+  src: url(../public/Outfit-Bold.ttf);
+}
+.text{
+  font-family: OutfitM;
+  font-size: 50px;
+}
+.descp{
+  font-family: OutfitR;
+  font-size: 20px;
+}

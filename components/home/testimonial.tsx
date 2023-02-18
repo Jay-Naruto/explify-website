@@ -103,17 +103,18 @@ const HomeTestimonial: FC = () => {
                 component="h2"
                 sx={{
                   position: 'relative',
-                  fontSize: { xs: 46, md: 46 },
+                
                   mt: { xs: 1, md: 1 },
                   mb: 4,
                   lineHeight: 1,
-                  fontWeight: 'bold',
+               
                   color: 'white',
                 }}
+                className={styles.text}
               >
                 Who We Are?{' '}
               </Typography>
-              <Typography sx={{ color: 'white', fontSize: { xs: 20, md: 20 } }}>
+              <Typography className={styles.descp} sx={{ color: 'white' }}>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet
                 blandit leo lobortis eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
                 malesuada lacus ex, sit amet blandit leo lobortis eget. Lorem ipsum dolor sit amet, consectetur

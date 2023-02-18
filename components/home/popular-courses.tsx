@@ -9,7 +9,7 @@ import { IconButton, useMediaQuery } from '@mui/material'
 import IconArrowBack from '@mui/icons-material/ArrowBack'
 import IconArrowForward from '@mui/icons-material/ArrowForward'
 import styles from '../../styles/time.module.css'
-
+import ScrollAnimation from 'react-animate-on-scroll';
 import { data } from './popular-course.data'
 import { CourseCardItem } from '../course'
 import { StyledButton } from '../styled-button'
@@ -62,6 +62,16 @@ const StyledDots = styled('ul')(({ theme }) => ({
 }))
 
 const HomePopularCourse: FC = () => {
+  const [scrollHeight, setScrollHeight] = useState(0);
+  const maxContentHeight = 1200; // Change this to adjust the maximum content height
+
+  // useEffect(() => {
+
+  //   return () => {
+  //     window.removeEventListener('scroll', handleScroll);
+  //   };
+  // }, [scrollHeight]);
+
   const [time1, setTime1] = useState<Number>()
   const [time2, setTime2] = useState<Number>()
 
@@ -69,9 +79,9 @@ const HomePopularCourse: FC = () => {
   useEffect(() => {
     $(window).scroll(function () {
       
-      if ($(window).scrollTop() > 550) {
+      if ($(window).scrollTop() > 500) {
         setTime1(1)
-      } else if ($(window).scrollTop() < 550) {
+      } else if ($(window).scrollTop() < 500) {
         setTime1(0)
       }
     })
@@ -94,7 +104,23 @@ const HomePopularCourse: FC = () => {
       }
     })
   })
+if (time1===1)
+{
+  const handleScroll = () => {
+    setScrollHeight(window.pageYOffset);
+  };
 
+  window.addEventListener('scroll', handleScroll);
+
+}
+else{
+  const handleScroll = () => {
+    setScrollHeight(0);
+  };
+
+  window.addEventListener('scroll', handleScroll);
+
+}
   const { breakpoints } = useTheme()
   const matchMobileView = useMediaQuery(breakpoints.down('md'))
 
@@ -121,7 +147,7 @@ const HomePopularCourse: FC = () => {
           xs: 6,
           md: 8,
         },
-        pb: 14,
+        pb: 0,
         backgroundColor: '',
       }}
     >
@@ -154,33 +180,28 @@ const HomePopularCourse: FC = () => {
       </Container> */}
       <div className={styles.header}>
         <Typography
-          component="h2"
           sx={{
             position: 'relative',
-            fontSize: { xs: 36, md: 46 },
             mt: { xs: 8, md: 9 },
             mb: 8,
             lineHeight: 1,
-            fontWeight: 'bold',
             color: 'white',
           }}
+          className={styles.text}
+
         >
           Our Services{' '}
         </Typography>
       </div>
 
-      <div className={styles.verticalbox}>
+      {/* <div className={styles.verticalbox}>
         <div className={styles.container}>
           <div className={styles.row}>
             <div className={styles.col}>
               <div className={styles.maintimeline}>
                 <div
                   id="timeline"
-                  style={
-                    time1 === 1
-                      ? { opacity: 1, transition: 'max-width 0.5s ease-in', maxWidth: '100%' }
-                      : { opacity: 0, transition: 'all 0.5s ease-in', maxWidth: 0 }
-                  }
+           
                   className={styles.timeline}
                 >
                   <a href="#" className={styles.timelinecontent}>
@@ -269,7 +290,97 @@ const HomePopularCourse: FC = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
+       <div className={styles.content}>
+<div   className={styles.visibleContent}
+          style={{ height: `${Math.min(scrollHeight, maxContentHeight)}px` }}>
+
+<p className={styles.p} >
+<ScrollAnimation animateIn='bounceInLeft' duration={2}>
+  
+ <div className={styles.serviceRows1}>
+  <div>
+  <div className={styles.content2}>
+                      <h3 className={styles.title}>Experential Learning</h3>
+                      <p className={styles.description}>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                        the industry's standard dummy text ever since the 1500s.
+                      </p>
+                      <Link href="/experential_Learning">
+                        <button className={styles.serviceBtns}>Know More</button>
+                      </Link>
+                    </div>
+  </div>
+  <div className={styles.serviceImg} style={{width:'40%'}}>
+  <img
+                        width="100%"
+                        src="https://rainbowclasseshisar.com/wp-content/uploads/2020/04/rainbow-classes-jee-preparation-after-class-10th.jpg"
+                        alt=""
+                        className={styles.timelineImg}
+                      />
+  </div>
+ </div>
+ </ScrollAnimation>
+
+  </p>
+  <p className={styles.p}>
+<ScrollAnimation animateIn='bounceInRight' duration={2}>
+    
+  <div className={styles.serviceRows2}>
+  <div>
+  <div className={styles.content3}>
+                      <h3 className={styles.title}>Virtual Experience</h3>
+                      <p className={styles.description}>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                        the industry's standard dummy text ever since the 1500s.
+                      </p>
+                      <Link href="/experential_Learning">
+                        <button className={styles.serviceBtns}>Know More</button>
+                      </Link>
+                    </div>
+  </div>
+  <div className={styles.serviceImg} style={{width:'40%'}}>
+  <img
+                        width="100%"
+                        src="https://rainbowclasseshisar.com/wp-content/uploads/2020/04/rainbow-classes-jee-preparation-after-class-10th.jpg"
+                        alt=""
+                        className={styles.timelineImg}
+                      />
+  </div>
+ </div>
+ </ScrollAnimation>
+
+    </p>
+  <p className={styles.p}>
+<ScrollAnimation animateIn='bounceInLeft' duration={2}>
+    
+  <div className={styles.serviceRows1}>
+  <div>
+  <div className={styles.content2}>
+                      <h3 className={styles.title}>Psychometric Test</h3>
+                      <p className={styles.description}>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                        the industry's standard dummy text ever since the 1500s.
+                      </p>
+                      <Link href="/experential_Learning">
+                        <button className={styles.serviceBtns}>Know More</button>
+                      </Link>
+                    </div>
+  </div>
+  <div className={styles.serviceImg} style={{width:'40%'}}>
+  <img
+                        width="100%"
+                        src="https://rainbowclasseshisar.com/wp-content/uploads/2020/04/rainbow-classes-jee-preparation-after-class-10th.jpg"
+                        alt=""
+                        className={styles.timelineImg}
+                      />
+  </div>
+ </div>
+ </ScrollAnimation>
+
+     </p>
+</div>
+   </div>
     </Box>
   )
 }

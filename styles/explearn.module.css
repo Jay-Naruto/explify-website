@@ -1,3 +1,11 @@
+@font-face {
+  font-family: OutfitR;
+  src: url(../public/Outfit-Medium.ttf);
+}
+@font-face {
+  font-family: OutfitM;
+  src: url(../public/Outfit-Bold.ttf);
+}
 .header {
   display: flex;
   justify-content: center;
@@ -15,6 +23,8 @@
   justify-content: center;
   align-items: center;
   width: 100%;
+  font-family: OutfitR;
+
 }
 .cardRow {
   width: 80%;
@@ -22,19 +32,36 @@
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: center;
+  font-family: OutfitR;
+
+}
+.text{
+  font-size: 50px;
+  font-family: OutfitM;
+
+}
+.title{
+  font-size: 20px;
+  font-family: OutfitM;
 }
 .cardBox {
   width: 400px;
 }
 @media screen and (max-width: 1000px) {
   .cardRow {
-    width: 90%;
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
   }
-  .cardBox {
-    width: 290px;
+  /* .cardBox {
+    width: 300px;
+  } */
+  .descpBody{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
   }
 }
