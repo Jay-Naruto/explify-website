@@ -63,7 +63,7 @@ const StyledDots = styled('ul')(({ theme }) => ({
 
 const HomePopularCourse: FC = () => {
   const [scrollHeight, setScrollHeight] = useState(0);
-  const maxContentHeight = 1200; // Change this to adjust the maximum content height
+  const maxContentHeight = 1100; // Change this to adjust the maximum content height
 
   // useEffect(() => {
 

@@ -138,9 +138,13 @@
 
 }
 .p:nth-child(even) {
-  border-left: 7px dotted #e0c781;
+  /* border-left: 7px dotted #e0c781; */
   border-top: none;
   border-width: 50%;
+  border-left-color: #e0c781;
+  border-left-style: dotted;
+  border-left-width: 7px;
+  
   padding-right: 0;
   border-bottom: 7px dotted #e0c781;
   border-top-right-radius: 0px;
