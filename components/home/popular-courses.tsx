@@ -9,7 +9,7 @@ import { IconButton, useMediaQuery } from '@mui/material'
 import IconArrowBack from '@mui/icons-material/ArrowBack'
 import IconArrowForward from '@mui/icons-material/ArrowForward'
 import styles from '../../styles/time.module.css'
-import ScrollAnimation from 'react-animate-on-scroll';
+
 import { data } from './popular-course.data'
 import { CourseCardItem } from '../course'
 import { StyledButton } from '../styled-button'
@@ -296,7 +296,6 @@ else{
           style={{ height: `${Math.min(scrollHeight, maxContentHeight)}px` }}>
 
 <p className={styles.p} >
-<ScrollAnimation animateIn='bounceInLeft' duration={2}>
   
  <div className={styles.serviceRows1}>
   <div>
@@ -320,11 +319,9 @@ else{
                       />
   </div>
  </div>
- </ScrollAnimation>
 
   </p>
   <p className={styles.p}>
-<ScrollAnimation animateIn='bounceInRight' duration={2}>
     
   <div className={styles.serviceRows2}>
   <div>
@@ -348,11 +345,9 @@ else{
                       />
   </div>
  </div>
- </ScrollAnimation>
 
     </p>
   <p className={styles.p}>
-<ScrollAnimation animateIn='bounceInLeft' duration={2}>
     
   <div className={styles.serviceRows1}>
   <div>
@@ -376,7 +371,6 @@ else{
                       />
   </div>
  </div>
- </ScrollAnimation>
 
      </p>
 </div>
