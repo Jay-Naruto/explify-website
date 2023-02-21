@@ -122,8 +122,8 @@
 }
 .p:nth-child(odd) {
   border-right: 7px solid #e0c781;
-  border-bottom: 7px dotted #e0c781;
-  border-right-style: dotted;
+  border-bottom: 7px solid #e0c781;
+  border-right-style: solid;
   animation: border-animation 1s linear infinite;
   /* border-bottom-style: hidden; */
   border-left: 0;
@@ -138,15 +138,15 @@
 
 }
 .p:nth-child(even) {
-  /* border-left: 7px dotted #e0c781; */
+  /* border-left: 7px solid #e0c781; */
   border-top: none;
   border-width: 50%;
   border-left-color: #e0c781;
-  border-left-style: dotted;
+  border-left-style: solid;
   border-left-width: 7px;
   
   padding-right: 0;
-  border-bottom: 7px dotted #e0c781;
+  border-bottom: 7px solid #e0c781;
   border-top-right-radius: 0px;
   border-top-left-radius: 0;
   border-bottom-right-radius: 0px;
@@ -160,7 +160,7 @@
 
 }
 .p:first-child {
-  border-top: 7px dotted #e0c781;
+  border-top: 7px solid #e0c781;
 
 
 
